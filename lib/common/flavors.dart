@@ -1,0 +1,5 @@
+
+
+enum Flavor{
+  free,paid
+}
