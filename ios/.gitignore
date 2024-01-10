@@ -16,6 +16,7 @@ profile
 xcuserdata
 **/.generated/
 Flutter/App.framework
+
 Flutter/Flutter.framework
 Flutter/Flutter.podspec
 Flutter/Generated.xcconfig
@@ -32,3 +33,4 @@ Runner/GeneratedPluginRegistrant.*
 !default.mode2v3
 !default.pbxuser
 !default.perspectivev3
+Podfile.lock
