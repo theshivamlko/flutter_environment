@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -20,7 +22,8 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     SchedulerBinding.instance.addPersistentFrameCallback((timeStamp) async {
       packageInfo = await PackageInfo.fromPlatform();
-      print('Running on ${packageInfo!.packageName}'); // e.g. "Moto G (4)"
+      print('Running on ${packageInfo!.packageName}'); // e.
+      setState(() {}); // g. "Moto G (4)"
     });
 
     super.initState();
@@ -41,18 +44,18 @@ class _MyHomePageState extends State<MyHomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
-                'Configuration: \n'
+                '1. Configuration: \n'
                 '${widget.appConfig.flavor}'
                 '\n${widget.appConfig.baseUrl}'
                 '\n${widget.appConfig.someValue}'
-                '\n${kReleaseMode ? "Release Mode" : "Debug Mode"}',
+                '\n2. ${kReleaseMode ? "Release Mode" : "Debug Mode"}',
                 style: const TextStyle(fontSize: 25),
               ),
               const Padding(padding: EdgeInsets.all(10)),
               Text(
-                'Package name: \n'
+                '3. ${Platform.isAndroid ? "Android Package" : "iOS Bundle Id"} : \n'
                 '${packageInfo?.packageName ?? ""}',
-                style: const TextStyle(fontSize: 25),
+                style: const TextStyle(fontSize: 22),
               ),
             ],
           ),
