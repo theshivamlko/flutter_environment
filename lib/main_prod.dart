@@ -1,4 +1,3 @@
-import 'package:args/args.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_environment/common/app_config.dart';
 import 'package:flutter_environment/common/flavors.dart';
@@ -7,7 +6,9 @@ import 'package:flutter_environment/my_home_page.dart';
 void main(List<String> arguments) {
   String someValue = String.fromEnvironment("some_value");
 
-  AppConfig appConfig = AppConfig("https://qa.exmaple.com", Flavor.free,someValue);
+  AppConfig appConfig =
+  AppConfig("https://example.com",
+      Flavor.free,someValue);
   runApp(MyApp(appConfig));
 }
 

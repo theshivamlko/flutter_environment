@@ -7,10 +7,11 @@ import 'package:flutter_environment/my_home_page.dart';
 void main(List<String> arguments) {
   String someValue = const String.fromEnvironment("some_value");
 
-  print("someValue $someValue -- $arguments");
+  print("someValue $someValue");
   AppConfig appConfig =
-      AppConfig("https://dev.exmaple.com", Flavor.free, someValue);
-  runApp(MyApp(appConfig));
+      AppConfig("https://dev.exmaple.com", Flavor.free,
+          someValue);
+ runApp(MyApp(appConfig));
 }
 
 class MyApp extends StatelessWidget {
