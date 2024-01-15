@@ -37,6 +37,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   args: ^2.4.2
   package_info_plus: ^4.2.0
+  dev_config:
+    ../dev_config
+  prod_config:
+    ../prod_config
 
 
 dev_dependencies:
